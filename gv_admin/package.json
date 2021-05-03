@@ -1,0 +1,51 @@
+{
+  "name": "gv_admin",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/react": "^11.1.1",
+    "@testing-library/user-event": "^12.2.0",
+    "chart.js": "^2.9.4",
+    "react": "^17.0.1",
+    "react-chartjs-2": "^2.11.1",
+    "react-confirm-alert": "^2.6.2",
+    "react-currency-format": "^1.0.0",
+    "react-currency-input-field": "^2.7.1",
+    "react-dom": "^17.0.1",
+    "react-globally": "^1.1.0",
+    "react-paginate": "^7.0.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.0",
+    "react-websocket": "^2.1.0",
+    "socket.io-client": "^3.0.5",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "set port=3100 && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "description": "A simple example deployed using react-codesandboxer",
+  "main": "index.js",
+  "proxy": "http://localhost:8080"
+}

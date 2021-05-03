@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="logo192.png" />
+
+
+    
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="icon" href="%PUBLIC_URL%/image/logo.png" type="image/png">
+    <!-- Bootstrap core CSS -->
+    <link href="%PUBLIC_URL%/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="%PUBLIC_URL%/css/modern-business.css" rel="stylesheet">
+    
+     <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDU2BEFYumJsyDsv3LBRQr2iNEL0obzAB0&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <title>Giúp việc nhanh</title>
+    
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <script src="%PUBLIC_URL%/vendor/jquery/jquery.min.js"></script>
+    <script src="%PUBLIC_URL%/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v9.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat fb_dialog"
+        attribution=setup_tool
+        page_id="104177921635583"
+    theme_color="#fa3c4c"
+    logged_in_greeting="Xin chào ! Giupviecnhanh.vn có thể giúp gì cho anh/chị ?"
+    logged_out_greeting="Xin chào ! Giupviecnhanh.vn có thể giúp gì cho anh/chị ?">
+      </div>
+    
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v5.0&appId=462649174443590&autoLogAppEvents=1"></script>
+
+    
+
+    <!-- <script>
+      function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 12,
+          center: { lat: -34.397, lng: 150.644 },
+        });
+        const geocoder = new google.maps.Geocoder();
+        document.getElementById("submit").addEventListener("click", () => {
+          geocodeAddress(geocoder, map);
+        });
+      }
+
+      function geocodeAddress(geocoder, resultsMap) {
+        const address = document.getElementById("sonha").value + "," + document.getElementById("duong").value + "," + document.getElementById("phuong").value + "," + document.getElementById("quan").value + "," + document.getElementById("quan").value ;
+        geocoder.geocode({ address: address }, (results, status) => {
+          if (status === "OK") {
+    
+            resultsMap.setCenter(results[0].geometry.location);
+            new google.maps.Marker({
+              map: resultsMap,
+              position: results[0].geometry.location,
+            });
+
+    const LatLng = results[0].geometry.location.toJSON();
+    console.log(LatLng);
+    $("#txtLat").val(LatLng.lat);
+                $("#txtLng").val(LatLng.lng);
+    $("#InputToaDo").val(LatLng.lat + "," + LatLng.lng);
+                $("#InputBanDo").val(`https://maps.google.com/maps?q=${LatLng.lat.toFixed(6)},${LatLng.lng.toFixed(6)}&z=15&output=embed&hl=vi`);
+          } else {
+            alert(
+              "Geocode was not successful for the following reason: " + status
+            );
+          }
+        });
+      }
+    </script> -->
+    <div id="map"></div>
+    
+  </body>
+</html>
